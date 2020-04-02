@@ -10,6 +10,16 @@ Here’s an example that shows how to use the code:
 
 First, you will need to get a TMDb API key. You can request one after registering your account on TMDb. (it will takes literally 2 minutes) https://developers.themoviedb.org/3/getting-started/introduction
 
-After you get your API Key, you are all set! If you want to watch a North Korean drama movie tonight but you want it relatively short, not too old, and not too popular, here is what you can input in the parameters.py
+After you get your API Key, you are all set! If you want to watch a North Korean horror movie tonight, but you want it relatively short, not too old, and not very popular, here is what you can input in the parameters.py 
+
+![Image description](https://github.com/mcsachounet/TMDb-Project/blob/master/INPUT.JPG)
+
+You can now run the Main.py (do not forget to install the requirements).
+
+As an output, you will have a csv spreadsheet (under your csv_filepath) with all the matching movies classifying from the best to the worst rating:
+
+![Image description](https://github.com/mcsachounet/TMDb-Project/blob/master/OUTPUT.JPG)
+
+
 
 
