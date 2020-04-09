@@ -1,4 +1,6 @@
-api_key = 'your_api_key'  #please input a valid imdb api-key
+from config import api_key,my_path
+
+api_key = api_key  #please input a valid imdb api-key
 
 lower_range_release = '1950-01-01'            # format date : YYYY-MM-DD ;
 upper_range_release = '2020-03-26'            # format date : YYYY-MM-DD
@@ -16,7 +18,7 @@ popularity = 4                          #input a popularity from 0 to 8 (0 will 
                                         # movie(s) from the list ; 8 will select all the more popular one(s)
                                         #from the list
 
-csv_filepath = "D:\Desktop\Movie\\mymoviefiles.csv"  #input the destination file
+csv_filepath = my_path  #input the destination file
                                                      #do not forget to put a \\ before the final file
-                                                     # example : D:\Desktop\Movie\\mymoviefiles.csv
+                                                     # example : "D:\Desktop\Movie\\mymoviefiles.csv"
 

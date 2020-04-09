@@ -2,7 +2,7 @@ import requests
 import sys
 import csv
 import numpy as np
-from Dic import iso_639_dic, genres
+from Dic import *
 from Parameters import *
 
 if not api_key:
@@ -47,23 +47,29 @@ if 0 <= popularity <= 8:
 else :
     decile_number = 8
 
+def getAPIUrl(pages_number):
+    url1 = 'https://api.themoviedb.org/3/discover/movie?api_key='
+    url2 = '&sort_by=vote_average.desc&include_adult=false&include_video=false&page='
+    url3 ='&primary_release_date.gte='
+    url4 = '&primary_release_date.lte='
+    url5 = '&vote_count.gte=100&with_genres='
+    url6 ='&with_runtime.lte='
+    url7 = '&with_original_language='
+    url= url1+api_key+url2+pages_number+url3+lower_range_release+url4+upper_range_release+url5+genre1+','+genre2+','\
+         +genre3+url6+runtime_max+url7+original_language
+    return url
 
-pages_number='1'
-url1 = 'https://api.themoviedb.org/3/discover/movie?api_key='
-url2 = '&sort_by=vote_average.desc&include_adult=false&include_video=false&page='
-url3 ='&primary_release_date.gte='
-url4 = '&primary_release_date.lte='
-url5 = '&vote_count.gte=100&with_genres='
-url6 ='&with_runtime.lte='
-url7 = '&with_original_language='
-url= url1+api_key+url2+pages_number+url3+lower_range_release+url4+upper_range_release+url5+genre1+','+genre2+','\
-     +genre3+url6+runtime_max+url7+original_language
-temp_json_data = requests.get(url).json()
+temp_json_data = requests.get(getAPIUrl('1')).json()
 
-try:
-    temp_json_data['status_message']
-    print( temp_json_data['status_message'])
-except: pass
+def getStatus_message():
+    try:
+        status_message= temp_json_data['status_message']
+        return status_message
+    except KeyError:
+        return "Missing status_message in the response data"
+
+
+
 
 
 if temp_json_data['total_results'] != 0:
@@ -79,10 +85,8 @@ for i in range(1,total_pages+1):
         break
     else:
         pass
-    pages_number = str(i)
-    url = url1 + api_key + url2 + pages_number + url3 + lower_range_release + url4 + upper_range_release + url5 + genre1 + ',' + genre2 + ',' \
-          + genre3 + url6 + runtime_max + url7 + original_language
-    json_data = requests.get(url).json()
+
+    json_data = requests.get(getAPIUrl(str(i))).json()
     number_of_results = len(json_data['results'])
     print(number_of_results)
 
