@@ -1,5 +1,5 @@
 # TMDb-Project
-Just a small piece of code (from an autodidact) in order to get a list of movies from TMDb depending on some string parameters you will pick (language, release date, genres, popularity).
+Get a list of movies from TMDb depending on some string parameters you will pick (language, release date, genres, popularity).
 
 I am using the discover request from TMDb API. This is more “friendly” than the API because you do not have to input ID filters (language,
 genre) but “real life  parameters”.
