@@ -2,8 +2,6 @@
 Get a list of movies from TMDb depending on some string parameters you will pick (language, release date, genres, popularity).
 
 # Example
-Here’s an example of how to use the code:
-
 First, you will need to get a TMDb API key. You can request one after registering your account on TMDb. (it takes literally 2 minutes) https://developers.themoviedb.org/3/getting-started/introduction
 
 After you get your Key, you are all set. If you want to watch a North Korean horror movie, but you want it relatively short, not too old, and not very trendy, here is what you can input in the Sample/Parameters.py 
