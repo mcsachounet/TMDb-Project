@@ -5,11 +5,11 @@ I am using the discover request from TMDb API. This is more “friendly” than 
 genre) but “real life  parameters”.
 
 # Example
-Here’s an example that shows how to use the code:
+Here’s an example of how to use the code:
 
-First, you will need to get a TMDb API key. You can request one after registering your account on TMDb. (it will takes literally 2 minutes) https://developers.themoviedb.org/3/getting-started/introduction
+First, you will need to get a TMDb API key. You can request one after registering your account on TMDb. (it takes literally 2 minutes) https://developers.themoviedb.org/3/getting-started/introduction
 
-After you get your API Key, you are all set! If you want to watch a North Korean horror movie tonight, but you want it relatively short, not too old, and not very popular, here is what you can input in the Sample/Parameters.py 
+After you get your Key, you are all set. If you want to watch a North Korean horror movie, but you want it relatively short, not too old, and not very trendy, here is what you can input in the Sample/Parameters.py 
 
 ![Image description](https://github.com/mcsachounet/TMDb-Project/blob/master/src/INPUT.JPG)
 
